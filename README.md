@@ -1,2 +1,21 @@
 # Sizwe-QA-Playwright-POE
-QA Test Analyst transitioning into Automation Testing through Playwright, TypeScript, Page Object Model, API testing, reporting, and modern test automation practices.
+
+This project demonstrates my transition from QA Test Analyst to Junior Automation Tester.
+
+## Tech Stack
+- Playwright
+- TypeScript
+- Node.js
+- GitHub
+
+## Framework Features
+- UI Automation
+- Page Object Model
+- Screenshots on failure
+- HTML Reports
+- Data-driven testing
+- CI/CD ready
+
+## Author
+Sizwe Ngwenya
+Junior Test Analyst | Aspiring Automation Tester
