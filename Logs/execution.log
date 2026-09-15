@@ -1,0 +1,448 @@
+[INFO] [2026-09-15 15:09:52] [EXTENT] STARTING TEST: Open New Checking Account
+[INFO] [2026-09-15 15:09:52] Establishing authenticated browser session context for Checking service modules...
+[INFO] [2026-09-15 15:09:52] [EXTENT] STARTING TEST: UIBank Login Authentication
+[INFO] [2026-09-15 15:09:53] [EXTENT] STARTING TEST: Submit Personal Loan Application Request
+[INFO] [2026-09-15 15:09:53] Establishing authorized session workspace for Loan services pipeline...
+[INFO] [2026-09-15 15:10:21] [EXTENT] STARTING TEST: Execute Account to Account Transfer
+[INFO] [2026-09-15 15:10:26] Initializing transfer funds verification context...
+[ERROR] [2026-09-15 15:10:55] [EXTENT] FAIL: Open New Checking Account
+[ERROR] [2026-09-15 15:10:55] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded while running "beforeEach" hook.[39m
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\checking.spec.ts:7:10
+[ERROR] [2026-09-15 15:10:57] [EXTENT] FAIL: Submit Personal Loan Application Request
+[ERROR] [2026-09-15 15:10:57] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded while running "beforeEach" hook.[39m
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\loan.spec.ts:7:10
+[ERROR] [2026-09-15 15:10:58] [EXTENT] FAIL: UIBank Login Authentication
+[ERROR] [2026-09-15 15:10:58] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[ERROR] [2026-09-15 15:11:07] [EXTENT] FAIL: Execute Account to Account Transfer
+[ERROR] [2026-09-15 15:11:07] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded while running "beforeEach" hook.[39m
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\transferFunds.spec.ts:7:10
+[INFO] [2026-09-15 15:11:10] [EXTENT] Report Path: C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\Reports\AutomationReport.html
+[INFO] [2026-09-15 15:11:10] [EXTENT] Pie Chart Generated: UIBank/Reports/AutomationReport.html
+[INFO] [2026-09-15 15:15:50] [EXTENT] STARTING TEST: Submit Personal Loan Application Request
+[INFO] [2026-09-15 15:15:50] Establishing authorized session workspace for Loan services pipeline...
+[INFO] [2026-09-15 15:15:51] [EXTENT] STARTING TEST: UIBank Login Authentication
+[INFO] [2026-09-15 15:15:53] Processing a new personal loan request evaluation workflow...
+[INFO] [2026-09-15 15:15:54] [EXTENT] STARTING TEST: Execute Account to Account Transfer
+[INFO] [2026-09-15 15:15:54] Initializing transfer funds verification context...
+[INFO] [2026-09-15 15:15:57] Initiating transaction: Transferring amount [undefined]
+[INFO] [2026-09-15 15:16:01] [EXTENT] STARTING TEST: Open New Checking Account
+[INFO] [2026-09-15 15:16:01] Establishing authenticated browser session context for Checking service modules...
+[INFO] [2026-09-15 15:16:03] Initiating creation pipeline for account nickname entry: [SizCheckAcc]
+[ERROR] [2026-09-15 15:16:10] [EXTENT] FAIL: UIBank Login Authentication
+[ERROR] [2026-09-15 15:16:10] Failure Diagnostics Stack Trace: Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+Expected pattern: [32m/.*account/[39m
+Received string:  [31m"https://uibank.uipath.com/welcome"[39m
+Timeout: 5000ms
+
+Call log:
+[2m  - Expect "toHaveURL" with timeout 5000ms[22m
+[2m    14 × locator resolved to <html lang="en" class="cdk-global-scrollblock">…</html>[22m
+[2m       - unexpected value "https://uibank.uipath.com/welcome"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\login.spec.ts:12:24
+[ERROR] [2026-09-15 15:16:49] [EXTENT] FAIL: Submit Personal Loan Application Request
+[ERROR] [2026-09-15 15:16:49] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[ERROR] [2026-09-15 15:16:54] [EXTENT] FAIL: Execute Account to Account Transfer
+[ERROR] [2026-09-15 15:16:54] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[ERROR] [2026-09-15 15:17:00] [EXTENT] FAIL: Open New Checking Account
+[ERROR] [2026-09-15 15:17:00] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 15:17:04] [EXTENT] Report Path: C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\Reports\AutomationReport.html
+[INFO] [2026-09-15 15:17:04] [EXTENT] Pie Chart Generated: UIBank/Reports/AutomationReport.html
+[INFO] [2026-09-15 15:23:44] [EXTENT] Report Path: C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\Reports\AutomationReport.html
+[INFO] [2026-09-15 15:23:44] [EXTENT] Pie Chart Generated: UIBank/Reports/AutomationReport.html
+[INFO] [2026-09-15 15:25:01] [EXTENT] Report Path: C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\Reports\AutomationReport.html
+[INFO] [2026-09-15 15:25:01] [EXTENT] Pie Chart Generated: UIBank/Reports/AutomationReport.html
+[INFO] [2026-09-15 15:27:17] [EXTENT] Report Path: C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\Reports\AutomationReport.html
+[INFO] [2026-09-15 15:27:17] [EXTENT] Pie Chart Generated: UIBank/Reports/AutomationReport.html
+[INFO] [2026-09-15 15:31:09] [EXTENT] Report Path: C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\Reports\AutomationReport.html
+[INFO] [2026-09-15 15:31:09] [EXTENT] Pie Chart Generated: UIBank/Reports/AutomationReport.html
+[INFO] [2026-09-15 15:32:39] [EXTENT] Report Path: C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\Reports\AutomationReport.html
+[INFO] [2026-09-15 15:32:39] [EXTENT] Pie Chart Generated: UIBank/Reports/AutomationReport.html
+[INFO] [2026-09-15 16:14:08] [EXTENT] STARTING TEST: UIBank Login Authentication
+[INFO] [2026-09-15 16:14:14] [EXTENT] STARTING TEST: Open New Checking Account
+[INFO] [2026-09-15 16:14:15] Establishing authenticated browser session context for Checking service modules...
+[INFO] [2026-09-15 16:14:15] [EXTENT] STARTING TEST: Submit Personal Loan Application Request
+[INFO] [2026-09-15 16:14:15] Establishing authorized session workspace for Loan services pipeline...
+[INFO] [2026-09-15 16:14:22] Initiating creation pipeline for account nickname entry: [SizCheckAcc]
+[INFO] [2026-09-15 16:14:23] Processing a new personal loan request evaluation workflow...
+[INFO] [2026-09-15 16:14:24] [EXTENT] STARTING TEST: Execute Account to Account Transfer
+[INFO] [2026-09-15 16:14:24] Initializing transfer funds verification context...
+[ERROR] [2026-09-15 16:14:25] [EXTENT] FAIL: UIBank Login Authentication
+[ERROR] [2026-09-15 16:14:25] Failure Diagnostics Stack Trace: Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+Expected pattern: [32m/.*account/[39m
+Received string:  [31m"https://uibank.uipath.com/welcome"[39m
+Timeout: 5000ms
+
+Call log:
+[2m  - Expect "toHaveURL" with timeout 5000ms[22m
+[2m    11 × locator resolved to <html lang="en" class="cdk-global-scrollblock">…</html>[22m
+[2m       - unexpected value "https://uibank.uipath.com/welcome"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\login.spec.ts:12:24
+[INFO] [2026-09-15 16:14:27] Initiating transaction: Transferring amount [undefined]
+[ERROR] [2026-09-15 16:15:10] [EXTENT] FAIL: Open New Checking Account
+[ERROR] [2026-09-15 16:15:10] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[ERROR] [2026-09-15 16:15:10] [EXTENT] FAIL: Submit Personal Loan Application Request
+[ERROR] [2026-09-15 16:15:10] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[ERROR] [2026-09-15 16:15:21] [EXTENT] FAIL: Execute Account to Account Transfer
+[ERROR] [2026-09-15 16:15:21] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 16:15:29] [EXTENT] Report Path: C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\Reports\AutomationReport.html
+[INFO] [2026-09-15 16:15:29] [EXTENT] Pie Chart Generated: UIBank/Reports/AutomationReport.html
+[INFO] [2026-09-15 16:17:12] [EXTENT] STARTING TEST: UIBank Login Authentication
+[ERROR] [2026-09-15 16:17:19] [EXTENT] FAIL: UIBank Login Authentication
+[ERROR] [2026-09-15 16:17:19] Failure Diagnostics Stack Trace: Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+Expected pattern: [32m/.*account/[39m
+Received string:  [31m"https://uibank.uipath.com/welcome"[39m
+Timeout: 5000ms
+
+Call log:
+[2m  - Expect "toHaveURL" with timeout 5000ms[22m
+[2m    14 × locator resolved to <html lang="en" class="cdk-global-scrollblock">…</html>[22m
+[2m       - unexpected value "https://uibank.uipath.com/welcome"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\login.spec.ts:12:24
+[INFO] [2026-09-15 16:17:20] [EXTENT] Report Path: C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\Reports\AutomationReport.html
+[INFO] [2026-09-15 16:17:20] [EXTENT] Pie Chart Generated: UIBank/Reports/AutomationReport.html
+[INFO] [2026-09-15 16:18:28] [EXTENT] STARTING TEST: UIBank Login Authentication
+[ERROR] [2026-09-15 16:18:36] [EXTENT] FAIL: UIBank Login Authentication
+[ERROR] [2026-09-15 16:18:36] Failure Diagnostics Stack Trace: Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+Expected pattern: [32m/.*account/[39m
+Received string:  [31m"https://uibank.uipath.com/welcome"[39m
+Timeout: 5000ms
+
+Call log:
+[2m  - Expect "toHaveURL" with timeout 5000ms[22m
+[2m    13 × locator resolved to <html lang="en" class="cdk-global-scrollblock">…</html>[22m
+[2m       - unexpected value "https://uibank.uipath.com/welcome"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\login.spec.ts:12:24
+[INFO] [2026-09-15 16:18:37] [EXTENT] Report Path: C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\Reports\AutomationReport.html
+[INFO] [2026-09-15 16:18:37] [EXTENT] Pie Chart Generated: UIBank/Reports/AutomationReport.html
+[INFO] [2026-09-15 16:25:12] [EXTENT] Report Path: C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\Reports\AutomationReport.html
+[INFO] [2026-09-15 16:25:12] [EXTENT] Pie Chart Generated: UIBank/Reports/AutomationReport.html
+[INFO] [2026-09-15 16:27:47] [EXTENT] Report Path: C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\Reports\AutomationReport.html
+[INFO] [2026-09-15 16:27:47] [EXTENT] Pie Chart Generated: UIBank/Reports/AutomationReport.html
+[INFO] [2026-09-15 16:34:28] [EXTENT] Report Path: C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\Reports\AutomationReport.html
+[INFO] [2026-09-15 16:34:28] [EXTENT] Pie Chart Generated: UIBank/Reports/AutomationReport.html
+[INFO] [2026-09-15 17:48:01] [EXTENT] STARTING TEST: Submit Personal Loan Application Form
+[INFO] [2026-09-15 17:48:01] Beginning personal loan application processing test run...
+[INFO] [2026-09-15 17:48:01] [EXTENT] STARTING TEST: Open New Checking Account and Verify Dashboard
+[INFO] [2026-09-15 17:48:01] Establishing authenticated browser session context for Checking service modules...
+[INFO] [2026-09-15 17:48:04] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 17:48:04] [EXTENT] STARTING TEST: UIBank Login Authentication Validation
+[INFO] [2026-09-15 17:48:04] Starting standalone login operational verification flow...
+[INFO] [2026-09-15 17:48:05] [EXTENT] STARTING TEST: Execute Account to Account Transfer Workflow
+[INFO] [2026-09-15 17:48:05] Establishing secure authorized session context for routing pipeline...
+[INFO] [2026-09-15 17:48:07] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 1 [Username: johnsmith01]
+[INFO] [2026-09-15 17:48:07] ▶️ Starting loop execution matrix row 1 of 50 for user profile: [johnsmith01]
+[INFO] [2026-09-15 17:48:53] Beginning multi-step financial transfer validation run...
+[INFO] [2026-09-15 17:48:53] Initiating account creation pipeline for entry: [SizCheckAcc]
+[ERROR] [2026-09-15 17:48:59] [EXTENT] FAIL: Submit Personal Loan Application Form
+[ERROR] [2026-09-15 17:48:59] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[ERROR] [2026-09-15 17:48:59] [EXTENT] FAIL: Open New Checking Account and Verify Dashboard
+[ERROR] [2026-09-15 17:48:59] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 17:49:04] Credential payloads sent successfully.
+[ERROR] [2026-09-15 17:49:04] [EXTENT] FAIL: Execute Account to Account Transfer Workflow
+[ERROR] [2026-09-15 17:49:04] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[ERROR] [2026-09-15 17:49:05] [EXTENT] FAIL: UIBank Login Authentication Validation
+[ERROR] [2026-09-15 17:49:05] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[ERROR] [2026-09-15 17:49:06] [EXTENT] FAIL: Client Registration Matrix Loop - Row 1 [Username: johnsmith01]
+[ERROR] [2026-09-15 17:49:06] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 17:49:14] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 17:49:16] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 2 [Username: sarahjohnson02]
+[INFO] [2026-09-15 17:49:16] ▶️ Starting loop execution matrix row 2 of 50 for user profile: [sarahjohnson02]
+[ERROR] [2026-09-15 17:50:15] [EXTENT] FAIL: Client Registration Matrix Loop - Row 2 [Username: sarahjohnson02]
+[ERROR] [2026-09-15 17:50:15] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 17:50:20] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 17:50:21] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 3 [Username: michaelwilliams03]
+[INFO] [2026-09-15 17:50:21] ▶️ Starting loop execution matrix row 3 of 50 for user profile: [michaelwilliams03]
+[ERROR] [2026-09-15 17:50:56] [EXTENT] FAIL: Client Registration Matrix Loop - Row 3 [Username: michaelwilliams03]
+[ERROR] [2026-09-15 17:50:56] Failure Diagnostics Stack Trace: Error: locator.click: Target page, context or browser has been closed
+Call log:
+[2m  - waiting for locator('app-welcome-page div.col-md-6 button, button:has-text("Register")')[22m
+
+    at RegistrationPage.clickRegisterButton (C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\pages\RegistrationPage.ts:39:35)
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:33:36
+[INFO] [2026-09-15 17:50:57] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 17:50:59] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 4 [Username: emilybrown04]
+[INFO] [2026-09-15 17:50:59] ▶️ Starting loop execution matrix row 4 of 50 for user profile: [emilybrown04]
+[ERROR] [2026-09-15 17:51:06] [EXTENT] FAIL: Client Registration Matrix Loop - Row 4 [Username: emilybrown04]
+[ERROR] [2026-09-15 17:51:06] Failure Diagnostics Stack Trace: Error: page.goto: Target page, context or browser has been closed
+Call log:
+[2m  - navigating to "https://uibank.uipath.com/welcome", waiting until "load"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:30:24
+[INFO] [2026-09-15 17:51:10] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 17:51:11] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 5 [Username: davidjones05]
+[INFO] [2026-09-15 17:51:11] ▶️ Starting loop execution matrix row 5 of 50 for user profile: [davidjones05]
+[ERROR] [2026-09-15 17:52:11] [EXTENT] FAIL: Client Registration Matrix Loop - Row 5 [Username: davidjones05]
+[ERROR] [2026-09-15 17:52:11] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 17:52:13] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 17:52:14] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 6 [Username: jessicagarcia06]
+[INFO] [2026-09-15 17:52:14] ▶️ Starting loop execution matrix row 6 of 50 for user profile: [jessicagarcia06]
+[ERROR] [2026-09-15 17:53:14] [EXTENT] FAIL: Client Registration Matrix Loop - Row 6 [Username: jessicagarcia06]
+[ERROR] [2026-09-15 17:53:14] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 17:53:17] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 17:53:19] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 7 [Username: matthewmiller07]
+[INFO] [2026-09-15 17:53:19] ▶️ Starting loop execution matrix row 7 of 50 for user profile: [matthewmiller07]
+[ERROR] [2026-09-15 17:54:18] [EXTENT] FAIL: Client Registration Matrix Loop - Row 7 [Username: matthewmiller07]
+[ERROR] [2026-09-15 17:54:18] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 17:54:35] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 17:54:37] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 8 [Username: ashleydavis08]
+[INFO] [2026-09-15 17:54:37] ▶️ Starting loop execution matrix row 8 of 50 for user profile: [ashleydavis08]
+[ERROR] [2026-09-15 17:55:36] [EXTENT] FAIL: Client Registration Matrix Loop - Row 8 [Username: ashleydavis08]
+[ERROR] [2026-09-15 17:55:36] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 17:55:39] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 17:55:39] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 9 [Username: christophermartinez09]
+[INFO] [2026-09-15 17:55:39] ▶️ Starting loop execution matrix row 9 of 50 for user profile: [christophermartinez09]
+[ERROR] [2026-09-15 17:56:39] [EXTENT] FAIL: Client Registration Matrix Loop - Row 9 [Username: christophermartinez09]
+[ERROR] [2026-09-15 17:56:39] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 17:56:41] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 17:56:42] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 10 [Username: amandahernandez10]
+[INFO] [2026-09-15 17:56:42] ▶️ Starting loop execution matrix row 10 of 50 for user profile: [amandahernandez10]
+[ERROR] [2026-09-15 17:57:42] [EXTENT] FAIL: Client Registration Matrix Loop - Row 10 [Username: amandahernandez10]
+[ERROR] [2026-09-15 17:57:42] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 17:57:45] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 17:57:46] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 11 [Username: daniellopez11]
+[INFO] [2026-09-15 17:57:46] ▶️ Starting loop execution matrix row 11 of 50 for user profile: [daniellopez11]
+[ERROR] [2026-09-15 17:58:46] [EXTENT] FAIL: Client Registration Matrix Loop - Row 11 [Username: daniellopez11]
+[ERROR] [2026-09-15 17:58:46] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 17:58:50] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 17:58:51] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 12 [Username: jennifergonzalez12]
+[INFO] [2026-09-15 17:58:51] ▶️ Starting loop execution matrix row 12 of 50 for user profile: [jennifergonzalez12]
+[ERROR] [2026-09-15 17:59:54] [EXTENT] FAIL: Client Registration Matrix Loop - Row 12 [Username: jennifergonzalez12]
+[ERROR] [2026-09-15 17:59:54] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 17:59:56] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 17:59:57] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 13 [Username: joshuawilson13]
+[INFO] [2026-09-15 17:59:57] ▶️ Starting loop execution matrix row 13 of 50 for user profile: [joshuawilson13]
+[ERROR] [2026-09-15 18:00:57] [EXTENT] FAIL: Client Registration Matrix Loop - Row 13 [Username: joshuawilson13]
+[ERROR] [2026-09-15 18:00:57] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:01:02] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:01:03] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 14 [Username: melissaanderson14]
+[INFO] [2026-09-15 18:01:03] ▶️ Starting loop execution matrix row 14 of 50 for user profile: [melissaanderson14]
+[ERROR] [2026-09-15 18:02:08] [EXTENT] FAIL: Client Registration Matrix Loop - Row 14 [Username: melissaanderson14]
+[ERROR] [2026-09-15 18:02:08] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:02:10] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:02:11] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 15 [Username: andrewthomas15]
+[INFO] [2026-09-15 18:02:11] ▶️ Starting loop execution matrix row 15 of 50 for user profile: [andrewthomas15]
+[ERROR] [2026-09-15 18:03:11] [EXTENT] FAIL: Client Registration Matrix Loop - Row 15 [Username: andrewthomas15]
+[ERROR] [2026-09-15 18:03:11] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:03:28] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:03:39] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 16 [Username: nicoletaylor16]
+[INFO] [2026-09-15 18:03:39] ▶️ Starting loop execution matrix row 16 of 50 for user profile: [nicoletaylor16]
+[ERROR] [2026-09-15 18:04:38] [EXTENT] FAIL: Client Registration Matrix Loop - Row 16 [Username: nicoletaylor16]
+[ERROR] [2026-09-15 18:04:38] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:04:48] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:04:50] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 17 [Username: ryanmoore17]
+[INFO] [2026-09-15 18:04:50] ▶️ Starting loop execution matrix row 17 of 50 for user profile: [ryanmoore17]
+[ERROR] [2026-09-15 18:05:50] [EXTENT] FAIL: Client Registration Matrix Loop - Row 17 [Username: ryanmoore17]
+[ERROR] [2026-09-15 18:05:50] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:05:54] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:05:56] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 18 [Username: samanthajackson18]
+[INFO] [2026-09-15 18:05:56] ▶️ Starting loop execution matrix row 18 of 50 for user profile: [samanthajackson18]
+[ERROR] [2026-09-15 18:06:56] [EXTENT] FAIL: Client Registration Matrix Loop - Row 18 [Username: samanthajackson18]
+[ERROR] [2026-09-15 18:06:56] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:07:01] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:07:02] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 19 [Username: brandonmartin19]
+[INFO] [2026-09-15 18:07:02] ▶️ Starting loop execution matrix row 19 of 50 for user profile: [brandonmartin19]
+[ERROR] [2026-09-15 18:08:02] [EXTENT] FAIL: Client Registration Matrix Loop - Row 19 [Username: brandonmartin19]
+[ERROR] [2026-09-15 18:08:02] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:08:06] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:08:07] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 20 [Username: laurenlee20]
+[INFO] [2026-09-15 18:08:07] ▶️ Starting loop execution matrix row 20 of 50 for user profile: [laurenlee20]
+[ERROR] [2026-09-15 18:09:06] [EXTENT] FAIL: Client Registration Matrix Loop - Row 20 [Username: laurenlee20]
+[ERROR] [2026-09-15 18:09:06] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:09:11] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:09:12] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 21 [Username: justinperez21]
+[INFO] [2026-09-15 18:09:12] ▶️ Starting loop execution matrix row 21 of 50 for user profile: [justinperez21]
+[ERROR] [2026-09-15 18:10:11] [EXTENT] FAIL: Client Registration Matrix Loop - Row 21 [Username: justinperez21]
+[ERROR] [2026-09-15 18:10:11] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:10:14] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:10:15] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 22 [Username: meganthompson22]
+[INFO] [2026-09-15 18:10:15] ▶️ Starting loop execution matrix row 22 of 50 for user profile: [meganthompson22]
+[ERROR] [2026-09-15 18:11:14] [EXTENT] FAIL: Client Registration Matrix Loop - Row 22 [Username: meganthompson22]
+[ERROR] [2026-09-15 18:11:14] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:11:17] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:11:18] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 23 [Username: kevinwhite23]
+[INFO] [2026-09-15 18:11:18] ▶️ Starting loop execution matrix row 23 of 50 for user profile: [kevinwhite23]
+[ERROR] [2026-09-15 18:12:18] [EXTENT] FAIL: Client Registration Matrix Loop - Row 23 [Username: kevinwhite23]
+[ERROR] [2026-09-15 18:12:18] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:12:21] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:12:22] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 24 [Username: rachelharris24]
+[INFO] [2026-09-15 18:12:22] ▶️ Starting loop execution matrix row 24 of 50 for user profile: [rachelharris24]
+[ERROR] [2026-09-15 18:12:56] [EXTENT] FAIL: Client Registration Matrix Loop - Row 24 [Username: rachelharris24]
+[ERROR] [2026-09-15 18:12:56] Failure Diagnostics Stack Trace: Error: page.goto: net::ERR_CONNECTION_CLOSED at https://uibank.uipath.com/welcome
+Call log:
+[2m  - navigating to "https://uibank.uipath.com/welcome", waiting until "load"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:30:24
+[INFO] [2026-09-15 18:12:58] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:12:59] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 25 [Username: tylersanchez25]
+[INFO] [2026-09-15 18:12:59] ▶️ Starting loop execution matrix row 25 of 50 for user profile: [tylersanchez25]
+[ERROR] [2026-09-15 18:13:39] [EXTENT] FAIL: Client Registration Matrix Loop - Row 25 [Username: tylersanchez25]
+[ERROR] [2026-09-15 18:13:39] Failure Diagnostics Stack Trace: Error: page.goto: net::ERR_TIMED_OUT at https://uibank.uipath.com/welcome
+Call log:
+[2m  - navigating to "https://uibank.uipath.com/welcome", waiting until "load"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:30:24
+[INFO] [2026-09-15 18:13:43] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:13:45] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 26 [Username: kaylaclark26]
+[INFO] [2026-09-15 18:13:45] ▶️ Starting loop execution matrix row 26 of 50 for user profile: [kaylaclark26]
+[ERROR] [2026-09-15 18:14:16] [EXTENT] FAIL: Client Registration Matrix Loop - Row 26 [Username: kaylaclark26]
+[ERROR] [2026-09-15 18:14:16] Failure Diagnostics Stack Trace: Error: page.goto: net::ERR_TIMED_OUT at https://uibank.uipath.com/welcome
+Call log:
+[2m  - navigating to "https://uibank.uipath.com/welcome", waiting until "load"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:30:24
+[INFO] [2026-09-15 18:14:21] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:14:22] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 27 [Username: nicholasramirez27]
+[INFO] [2026-09-15 18:14:22] ▶️ Starting loop execution matrix row 27 of 50 for user profile: [nicholasramirez27]
+[ERROR] [2026-09-15 18:15:09] [EXTENT] FAIL: Client Registration Matrix Loop - Row 27 [Username: nicholasramirez27]
+[ERROR] [2026-09-15 18:15:09] Failure Diagnostics Stack Trace: Error: page.goto: net::ERR_TIMED_OUT at https://uibank.uipath.com/welcome
+Call log:
+[2m  - navigating to "https://uibank.uipath.com/welcome", waiting until "load"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:30:24
+[INFO] [2026-09-15 18:15:15] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:15:16] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 28 [Username: olivialewis28]
+[INFO] [2026-09-15 18:15:16] ▶️ Starting loop execution matrix row 28 of 50 for user profile: [olivialewis28]
+[ERROR] [2026-09-15 18:15:27] [EXTENT] FAIL: Client Registration Matrix Loop - Row 28 [Username: olivialewis28]
+[ERROR] [2026-09-15 18:15:27] Failure Diagnostics Stack Trace: Error: page.goto: net::ERR_NETWORK_CHANGED at https://uibank.uipath.com/welcome
+Call log:
+[2m  - navigating to "https://uibank.uipath.com/welcome", waiting until "load"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:30:24
+[INFO] [2026-09-15 18:15:30] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:15:35] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 29 [Username: jonathanrobinson29]
+[INFO] [2026-09-15 18:15:35] ▶️ Starting loop execution matrix row 29 of 50 for user profile: [jonathanrobinson29]
+[ERROR] [2026-09-15 18:15:50] [EXTENT] FAIL: Client Registration Matrix Loop - Row 29 [Username: jonathanrobinson29]
+[ERROR] [2026-09-15 18:15:50] Failure Diagnostics Stack Trace: Error: page.goto: net::ERR_ABORTED at https://uibank.uipath.com/welcome
+Call log:
+[2m  - navigating to "https://uibank.uipath.com/welcome", waiting until "load"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:30:24
+[INFO] [2026-09-15 18:16:00] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:16:02] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 30 [Username: hannahwalker30]
+[INFO] [2026-09-15 18:16:02] ▶️ Starting loop execution matrix row 30 of 50 for user profile: [hannahwalker30]
+[ERROR] [2026-09-15 18:16:26] [EXTENT] FAIL: Client Registration Matrix Loop - Row 30 [Username: hannahwalker30]
+[ERROR] [2026-09-15 18:16:26] Failure Diagnostics Stack Trace: Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://uibank.uipath.com/welcome
+Call log:
+[2m  - navigating to "https://uibank.uipath.com/welcome", waiting until "load"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:30:24
+[INFO] [2026-09-15 18:16:31] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:16:33] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 31 [Username: patrickyoung31]
+[INFO] [2026-09-15 18:16:33] ▶️ Starting loop execution matrix row 31 of 50 for user profile: [patrickyoung31]
+[ERROR] [2026-09-15 18:16:51] [EXTENT] FAIL: Client Registration Matrix Loop - Row 31 [Username: patrickyoung31]
+[ERROR] [2026-09-15 18:16:51] Failure Diagnostics Stack Trace: Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://uibank.uipath.com/welcome
+Call log:
+[2m  - navigating to "https://uibank.uipath.com/welcome", waiting until "load"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:30:24
+[INFO] [2026-09-15 18:16:55] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:16:57] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 32 [Username: abigailallen32]
+[INFO] [2026-09-15 18:16:57] ▶️ Starting loop execution matrix row 32 of 50 for user profile: [abigailallen32]
+[ERROR] [2026-09-15 18:17:13] [EXTENT] FAIL: Client Registration Matrix Loop - Row 32 [Username: abigailallen32]
+[ERROR] [2026-09-15 18:17:13] Failure Diagnostics Stack Trace: Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://uibank.uipath.com/welcome
+Call log:
+[2m  - navigating to "https://uibank.uipath.com/welcome", waiting until "load"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:30:24
+[INFO] [2026-09-15 18:17:45] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:17:49] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 33 [Username: ethanking33]
+[INFO] [2026-09-15 18:17:49] ▶️ Starting loop execution matrix row 33 of 50 for user profile: [ethanking33]
+[ERROR] [2026-09-15 18:18:27] [EXTENT] FAIL: Client Registration Matrix Loop - Row 33 [Username: ethanking33]
+[ERROR] [2026-09-15 18:18:27] Failure Diagnostics Stack Trace: Error: page.goto: net::ERR_TIMED_OUT at https://uibank.uipath.com/welcome
+Call log:
+[2m  - navigating to "https://uibank.uipath.com/welcome", waiting until "load"[22m
+
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:30:24
+[INFO] [2026-09-15 18:18:31] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:18:33] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 34 [Username: gracewright34]
+[INFO] [2026-09-15 18:18:33] ▶️ Starting loop execution matrix row 34 of 50 for user profile: [gracewright34]
+[ERROR] [2026-09-15 18:19:37] [EXTENT] FAIL: Client Registration Matrix Loop - Row 34 [Username: gracewright34]
+[ERROR] [2026-09-15 18:19:37] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:19:50] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:19:51] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 35 [Username: benjaminscott35]
+[INFO] [2026-09-15 18:19:51] ▶️ Starting loop execution matrix row 35 of 50 for user profile: [benjaminscott35]
+[ERROR] [2026-09-15 18:20:56] [EXTENT] FAIL: Client Registration Matrix Loop - Row 35 [Username: benjaminscott35]
+[ERROR] [2026-09-15 18:20:56] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:21:10] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:21:11] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 36 [Username: victoriatorres36]
+[INFO] [2026-09-15 18:21:11] ▶️ Starting loop execution matrix row 36 of 50 for user profile: [victoriatorres36]
+[ERROR] [2026-09-15 18:22:11] [EXTENT] FAIL: Client Registration Matrix Loop - Row 36 [Username: victoriatorres36]
+[ERROR] [2026-09-15 18:22:11] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:22:17] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:22:18] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 37 [Username: nathannguyen37]
+[INFO] [2026-09-15 18:22:18] ▶️ Starting loop execution matrix row 37 of 50 for user profile: [nathannguyen37]
+[ERROR] [2026-09-15 18:23:17] [EXTENT] FAIL: Client Registration Matrix Loop - Row 37 [Username: nathannguyen37]
+[ERROR] [2026-09-15 18:23:17] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:23:20] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:23:21] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 38 [Username: chloehill38]
+[INFO] [2026-09-15 18:23:21] ▶️ Starting loop execution matrix row 38 of 50 for user profile: [chloehill38]
+[ERROR] [2026-09-15 18:24:20] [EXTENT] FAIL: Client Registration Matrix Loop - Row 38 [Username: chloehill38]
+[ERROR] [2026-09-15 18:24:20] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:24:29] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:24:30] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 39 [Username: christianflores39]
+[INFO] [2026-09-15 18:24:30] ▶️ Starting loop execution matrix row 39 of 50 for user profile: [christianflores39]
+[ERROR] [2026-09-15 18:25:30] [EXTENT] FAIL: Client Registration Matrix Loop - Row 39 [Username: christianflores39]
+[ERROR] [2026-09-15 18:25:30] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:25:33] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:25:34] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 40 [Username: nataliegreen40]
+[INFO] [2026-09-15 18:25:34] ▶️ Starting loop execution matrix row 40 of 50 for user profile: [nataliegreen40]
+[ERROR] [2026-09-15 18:26:34] [EXTENT] FAIL: Client Registration Matrix Loop - Row 40 [Username: nataliegreen40]
+[ERROR] [2026-09-15 18:26:34] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:26:39] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:26:40] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 41 [Username: aaronadams41]
+[INFO] [2026-09-15 18:26:40] ▶️ Starting loop execution matrix row 41 of 50 for user profile: [aaronadams41]
+[ERROR] [2026-09-15 18:27:40] [EXTENT] FAIL: Client Registration Matrix Loop - Row 41 [Username: aaronadams41]
+[ERROR] [2026-09-15 18:27:40] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:27:42] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:27:43] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 42 [Username: zoenelson42]
+[INFO] [2026-09-15 18:27:43] ▶️ Starting loop execution matrix row 42 of 50 for user profile: [zoenelson42]
+[ERROR] [2026-09-15 18:28:42] [EXTENT] FAIL: Client Registration Matrix Loop - Row 42 [Username: zoenelson42]
+[ERROR] [2026-09-15 18:28:42] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:28:47] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:28:48] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 43 [Username: jasonbaker43]
+[INFO] [2026-09-15 18:28:48] ▶️ Starting loop execution matrix row 43 of 50 for user profile: [jasonbaker43]
+[ERROR] [2026-09-15 18:29:48] [EXTENT] FAIL: Client Registration Matrix Loop - Row 43 [Username: jasonbaker43]
+[ERROR] [2026-09-15 18:29:48] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:29:50] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:29:51] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 44 [Username: faithhall44]
+[INFO] [2026-09-15 18:29:51] ▶️ Starting loop execution matrix row 44 of 50 for user profile: [faithhall44]
+[ERROR] [2026-09-15 18:30:51] [EXTENT] FAIL: Client Registration Matrix Loop - Row 44 [Username: faithhall44]
+[ERROR] [2026-09-15 18:30:51] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:30:54] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:30:55] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 45 [Username: kylecampbell45]
+[INFO] [2026-09-15 18:30:55] ▶️ Starting loop execution matrix row 45 of 50 for user profile: [kylecampbell45]
+[ERROR] [2026-09-15 18:31:55] [EXTENT] FAIL: Client Registration Matrix Loop - Row 45 [Username: kylecampbell45]
+[ERROR] [2026-09-15 18:31:55] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:31:59] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:32:00] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 46 [Username: brookemitchell46]
+[INFO] [2026-09-15 18:32:00] ▶️ Starting loop execution matrix row 46 of 50 for user profile: [brookemitchell46]
+[ERROR] [2026-09-15 18:33:03] [EXTENT] FAIL: Client Registration Matrix Loop - Row 46 [Username: brookemitchell46]
+[ERROR] [2026-09-15 18:33:03] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:33:05] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:33:06] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 47 [Username: seancarter47]
+[INFO] [2026-09-15 18:33:06] ▶️ Starting loop execution matrix row 47 of 50 for user profile: [seancarter47]
+[ERROR] [2026-09-15 18:34:06] [EXTENT] FAIL: Client Registration Matrix Loop - Row 47 [Username: seancarter47]
+[ERROR] [2026-09-15 18:34:06] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:34:10] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:34:11] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 48 [Username: paigeroberts48]
+[INFO] [2026-09-15 18:34:11] ▶️ Starting loop execution matrix row 48 of 50 for user profile: [paigeroberts48]
+[ERROR] [2026-09-15 18:35:10] [EXTENT] FAIL: Client Registration Matrix Loop - Row 48 [Username: paigeroberts48]
+[ERROR] [2026-09-15 18:35:10] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:35:14] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:35:15] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 49 [Username: adamphillips49]
+[INFO] [2026-09-15 18:35:15] ▶️ Starting loop execution matrix row 49 of 50 for user profile: [adamphillips49]
+[ERROR] [2026-09-15 18:36:14] [EXTENT] FAIL: Client Registration Matrix Loop - Row 49 [Username: adamphillips49]
+[ERROR] [2026-09-15 18:36:14] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-15 18:36:18] Initializing registration pipeline execution engine...
+[INFO] [2026-09-15 18:36:18] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 50 [Username: emmaevans50]
+[INFO] [2026-09-15 18:36:18] ▶️ Starting loop execution matrix row 50 of 50 for user profile: [emmaevans50]
+[ERROR] [2026-09-15 18:37:18] [EXTENT] FAIL: Client Registration Matrix Loop - Row 50 [Username: emmaevans50]
+[ERROR] [2026-09-15 18:37:18] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m

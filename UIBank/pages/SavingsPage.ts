@@ -1,58 +1,44 @@
-import { Page } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 
 export class SavingsPage {
+    private readonly savingsAccountTile: Locator;
+    private readonly accountNicknameField: Locator;
+    private readonly accountTypeDropdown: Locator;
+    private readonly openAccountButton: Locator;
+    private readonly viewAccountsButton: Locator;
 
-    constructor(private page: Page) {}
-
-    private savingsAccountTile =
-        'xpath=/html/body/app-root/body/div/app-account/app-accounts/div/div[1]/div/div/div[1]/div[2]';
-
-    private accountNickname =
-        '#accountNickname';
-
-    private savingsAccountOption =
-        'xpath=//*[@id="typeOfAccount"]/option[2]';
-
-    private openAccountButton =
-        'xpath=/html/body/app-root/body/div/app-account/app-account-apply/div/div[2]/form/button';
-
-    private viewAccountsButton =
-        '#viewAccounts';
+    constructor(private readonly page: Page) {
+        // FIXED: Replaced absolute path with card tracking locator pointing to the second account tile
+        this.savingsAccountTile = page.locator('app-accounts div.card').nth(1);
+        this.accountNicknameField = page.locator('#accountNickname');
+        
+        // FIXED: Pointed to the parent select container to allow programmatic option picking
+        this.accountTypeDropdown = page.locator('#typeOfAccount');
+        this.openAccountButton = page.locator('app-account-apply form button');
+        this.viewAccountsButton = page.locator('#viewAccounts');
+    }
 
     async clickSavingsAccount(): Promise<void> {
-
-        await this.page
-            .locator(this.savingsAccountTile)
-            .click();
+        await this.savingsAccountTile.click();
     }
 
-    async enterNickname(
-        nickname: string
-    ): Promise<void> {
-
-        await this.page
-            .locator(this.accountNickname)
-            .fill(nickname);
+    async enterNickname(nickname: string): Promise<void> {
+        await this.accountNicknameField.fill(nickname);
     }
 
+    /**
+     * FIXED: Interacts with dropdown using native Playwright selectOption API 
+     * which bypasses hidden element actionability blocks cleanly.
+     */
     async selectSavingsAccount(): Promise<void> {
-
-        await this.page
-            .locator(this.savingsAccountOption)
-            .click();
+        await this.accountTypeDropdown.selectOption({ value: 'savings' });
     }
 
     async submitApplication(): Promise<void> {
-
-        await this.page
-            .locator(this.openAccountButton)
-            .click();
+        await this.openAccountButton.click();
     }
 
     async viewAccounts(): Promise<void> {
-
-        await this.page
-            .locator(this.viewAccountsButton)
-            .click();
+        await this.viewAccountsButton.click();
     }
 }

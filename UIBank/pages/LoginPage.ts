@@ -1,57 +1,71 @@
-import { Page } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 
 export class LoginPage {
 
-    private page: Page;
+    private readonly usernameField: Locator;
+    private readonly passwordField: Locator;
+    private readonly loginButton: Locator;
 
-    constructor(page: Page) {
-        this.page = page;
+    constructor(private readonly page: Page) {
+
+        this.usernameField =
+            page.locator('#username');
+
+        this.passwordField =
+            page.locator('#password');
+
+        this.loginButton =
+            page.getByRole('button', {
+                name: 'Sign In'
+            });
     }
 
-    // Locators
+    async enterUsername(
+        username: string
+    ): Promise<void> {
 
-    private usernameField = '#username';
-
-    private passwordField = '#password';
-
-    private loginButton =
-        '/html/body/app-root/body/div/app-welcome-page/div[1]/div/div[1]/div/form/div[3]/button';
-
-    private agreementButton =
-        "//*[@id='mat-mdc-dialog-0']/div/div/app-agreement-popup/mat-dialog-content/div[2]/button";
-
-    // Methods
-
-    async enterUsername(username: string): Promise<void> {
-
-        await this.page
-            .locator(this.usernameField)
-            .fill(username);
+        await this.usernameField.fill(
+            username
+        );
     }
 
-    async enterPassword(password: string): Promise<void> {
+    async enterPassword(
+        password: string
+    ): Promise<void> {
 
-        await this.page
-            .locator(this.passwordField)
-            .fill(password);
+        await this.passwordField.fill(
+            password
+        );
     }
 
     async clickLogin(): Promise<void> {
 
-        await this.page
-            .locator(`xpath=${this.loginButton}`)
-            .click();
+        await this.loginButton.waitFor({
+            state: 'visible'
+        });
+
+        await this.loginButton.click();
     }
 
     async acceptAgreement(): Promise<void> {
 
         try {
 
-            await this.page
-                .locator(`xpath=${this.agreementButton}`)
-                .click({
-                    timeout: 5000
+            const agreementButton =
+                this.page.getByRole('button', {
+                    name: /i agree/i
                 });
+
+            await agreementButton.waitFor({
+                state: 'visible',
+                timeout: 10000
+            });
+
+            await agreementButton.click();
+
+            console.log(
+                'Agreement accepted.'
+            );
 
         } catch {
 
@@ -66,9 +80,13 @@ export class LoginPage {
         password: string
     ): Promise<void> {
 
-        await this.enterUsername(username);
+        await this.enterUsername(
+            username
+        );
 
-        await this.enterPassword(password);
+        await this.enterPassword(
+            password
+        );
 
         await this.clickLogin();
 
