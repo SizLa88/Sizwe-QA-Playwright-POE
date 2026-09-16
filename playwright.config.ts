@@ -1,47 +1,85 @@
 import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
-    // Points to your customized Selenium-migrated source folder structure
+
+    // Test Location
     testDir: './UIBank/tests',
 
-    // Maximum timeout per test set to 60 seconds (1 minute)
-    timeout: 60000,
+    // Increased from 60 sec to 3 min
+    timeout: 180000,
 
-    // Global testing framework behaviors applied across all projects
+    // Reduce concurrency to avoid UIBank throttling/timeouts
+    workers: 1,
+
+    // Prevent excessive parallel execution
+    fullyParallel: false,
+
     use: {
-        headless: false,
+
+        // Faster and more stable for CI/Test Runs
+        headless: true,
+
+        // Screenshot capture
         screenshot: 'only-on-failure',
+
+        // Video retention
         video: 'retain-on-failure',
-        trace: 'on-first-retry',
-        
-        // FIXED: Setting viewport to null overrides Playwright's fixed 1280x720 box restriction
-        viewport: null
+
+        // Trace retention
+        trace: 'retain-on-failure',
+
+        // Extra navigation timeout
+        navigationTimeout: 120000,
+
+        // Extra action timeout
+        actionTimeout: 30000,
+
+        viewport: {
+            width: 1920,
+            height: 1080
+        }
     },
 
-    // Multi-Reporter Pipeline: Combines text progress, detailed HTML logging, and your custom Pie Chart dashboard
     reporter: [
-        ['list'], // Prints live progress summaries directly to the terminal shell
+
+        ['list'],
+
         [
             'html',
             {
                 outputFolder: 'UIBank/Reports',
-                open: 'never' // Prevents a browser tab from forcefully popping open on headless server runners
+                open: 'never'
             }
-        ],
-        ['./UIBank/fixtures/PieChartReporter.ts'] // Dynamically compiles the standalone custom pie chart dashboard
+        ]
     ],
 
-    // Target browser environments and execution platforms
     projects: [
         {
             name: 'Microsoft Edge',
+
             use: {
+
                 browserName: 'chromium',
+
                 channel: 'msedge',
-                
-                // FIXED: Forces the Microsoft Edge application window shell to launch completely maximized on your monitor
+
+                viewport: {
+                    width: 1920,
+                    height: 1080
+                },
+
                 launchOptions: {
-                    args: ['--start-maximized']
+
+                    args: [
+
+                        '--start-maximized',
+
+                        '--disable-dev-shm-usage',
+
+                        '--disable-gpu',
+
+                        '--no-sandbox'
+                    ]
                 }
             }
         }

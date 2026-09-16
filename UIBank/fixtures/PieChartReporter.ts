@@ -8,7 +8,7 @@ export default class PieChartReporter implements Reporter {
     private passedTests = 0;
     private failedTests = 0;
     private skippedTests = 0;
-    private testRecords: Array<{ name: string; status: string; duration: number; error?: string; screenshot?: string }> = [];
+    private testRecords: Array<{ name: string; status: string; duration: number; error?: string; screenshot?: string; video?: string }> = [];
 
     // Replaces: ITestListener.onTestStart & onTestSuccess / onTestFailure / onTestSkipped
     onTestEnd(test: TestCase, result: TestResult) {
@@ -16,6 +16,7 @@ export default class PieChartReporter implements Reporter {
         
         if (result.status === 'passed') {
             this.passedTests++;
+            finalStatus = 'PASSED';
         } else if (result.status === 'failed' || result.status === 'timedOut') {
             this.failedTests++;
             finalStatus = 'FAIL';
@@ -24,13 +25,18 @@ export default class PieChartReporter implements Reporter {
             finalStatus = 'SKIPPED';
         }
 
-        // Replaces your manual ScreenshotHelper snapshot catch and attach block
+        // Intercept failure screenshot attachments cleanly
         const screenshotAttachment = result.attachments.find(a => a.name === 'screenshot' || a.contentType?.includes('image'));
         let relativeScreenshotPath = '';
-        
         if (screenshotAttachment && screenshotAttachment.path) {
-            // Generates a relative path location reference so the static report can load it locally without servers
             relativeScreenshotPath = path.relative(path.resolve(process.cwd(), 'UIBank/Reports'), screenshotAttachment.path);
+        }
+
+        // Intercept captured framework video clips to expose links dynamically inside the dashboard
+        const videoAttachment = result.attachments.find(a => a.name === 'video' || a.contentType?.includes('video'));
+        let relativeVideoPath = '';
+        if (videoAttachment && videoAttachment.path) {
+            relativeVideoPath = path.relative(path.resolve(process.cwd(), 'UIBank/Reports'), videoAttachment.path);
         }
 
         this.testRecords.push({
@@ -38,7 +44,8 @@ export default class PieChartReporter implements Reporter {
             status: finalStatus,
             duration: result.duration,
             error: result.errors && result.errors.length > 0 ? result.errors.map(e => e.message).join('\n') : undefined,
-            screenshot: relativeScreenshotPath
+            screenshot: relativeScreenshotPath,
+            video: relativeVideoPath
         });
     }
 
@@ -51,7 +58,7 @@ export default class PieChartReporter implements Reporter {
         const failDeg = totalTests > 0 ? (this.failedTests / totalTests) * 360 : 0;
         const failBound = passDeg + failDeg;
 
-        // Replaces dynamic table logs creation layout
+        // Dynamically map rows, ensuring badging checks evaluate true and attach video hyperlinks
         const tableRows = this.testRecords.map(t => `
             <tr>
                 <td><strong>${t.name}</strong></td>
@@ -60,6 +67,7 @@ export default class PieChartReporter implements Reporter {
                 <td>
                     ${t.error ? `<div class="error-msg">${t.error.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>` : '<span style="color:#868e96;">N/A - Completed Safely</span>'}
                     ${t.screenshot ? `<br><a href="${t.screenshot}" target="_blank" class="screenshot-link">🖼️ View Failure Screenshot</a>` : ''}
+                    ${t.video ? `<br><a href="${t.video}" target="_blank" class="screenshot-link" style="color:#1c7ed6; margin-left: 10px;">🎥 Play Failure Video</a>` : ''}
                 </td>
             </tr>
         `).join('');
@@ -72,16 +80,16 @@ export default class PieChartReporter implements Reporter {
 
         let htmlContent = fs.readFileSync(templatePath, 'utf-8');
 
-        // Dynamic placeholder payload replacement engine
+        // FIXED: Enforced strict regular expressions with global flags (/g) to guarantee full text data substitution
         htmlContent = htmlContent
             .replace(/__PASS_DEG__/g, passDeg.toFixed(2))
             .replace(/__FAIL_BOUND__/g, failBound.toFixed(2))
-            .replace('__TIMESTAMP__', new Date().toISOString().replace('T', ' ').substring(0, 19))
-            .replace('__TOTAL__', totalTests.toString())
-            .replace('__PASSED__', this.passedTests.toString())
-            .replace('__FAILED__', this.failedTests.toString())
-            .replace('__SKIPPED__', this.skippedTests.toString())
-            .replace('__TABLE_ROWS__', tableRows);
+            .replace(/__TIMESTAMP__/g, new Date().toISOString().replace('T', ' ').substring(0, 19))
+            .replace(/__TOTAL__/g, totalTests.toString())
+            .replace(/__PASSED__/g, this.passedTests.toString())
+            .replace(/__FAILED__/g, this.failedTests.toString())
+            .replace(/__SKIPPED__/g, this.skippedTests.toString())
+            .replace(/__TABLE_ROWS__/g, tableRows);
 
         const reportDir = path.resolve(process.cwd(), 'UIBank/Reports');
         if (!fs.existsSync(reportDir)) {
