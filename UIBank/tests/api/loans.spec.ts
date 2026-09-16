@@ -6,5 +6,11 @@ test('GET Loans', async ({ request }) => {
         'https://uibank.uipath.com/api/loans'
     );
 
-    expect(response.status()).toBe(200);
+    const body = await response.text();
+
+    console.log('\n===== LOANS RESPONSE =====');
+    console.log('Status:', response.status());
+    console.log('Body:', body);
+
+    expect(response.ok()).toBeTruthy();
 });

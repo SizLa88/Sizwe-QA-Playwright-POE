@@ -1417,3 +1417,33 @@ Call log:
 [ERROR] [2026-09-16 00:58:35] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
 [ERROR] [2026-09-16 00:58:53] [EXTENT] FAIL: Execute Account to Account Transfer Workflow
 [ERROR] [2026-09-16 00:58:53] Failure Diagnostics Stack Trace: [31mTest timeout of 60000ms exceeded.[39m
+[INFO] [2026-09-16 01:21:59] Initializing registration pipeline execution engine...
+[INFO] [2026-09-16 01:21:59] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 1 [Username: johnsmith01]
+[INFO] [2026-09-16 01:21:59] ▶️ Starting loop execution matrix row 1 of 50 for user profile: [johnsmith01]
+[ERROR] [2026-09-16 01:22:32] [EXTENT] FAIL: Client Registration Matrix Loop - Row 1 [Username: johnsmith01]
+[ERROR] [2026-09-16 01:22:32] Failure Diagnostics Stack Trace: TimeoutError: locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('app-welcome-page div.col-md-6 button, button:has-text("Register")')[22m
+
+    at RegistrationPage.clickRegisterButton (C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\pages\RegistrationPage.ts:39:35)
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:60:40
+[INFO] [2026-09-16 01:26:34] Initializing registration pipeline execution engine...
+[INFO] [2026-09-16 01:26:34] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 1 [Username: johnsmith01]
+[INFO] [2026-09-16 01:26:34] ▶️ Starting loop execution matrix row 1 of 50 for user profile: [johnsmith01]
+[ERROR] [2026-09-16 01:27:08] [EXTENT] FAIL: Client Registration Matrix Loop - Row 1 [Username: johnsmith01]
+[ERROR] [2026-09-16 01:27:08] Failure Diagnostics Stack Trace: TimeoutError: locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('app-welcome-page div.col-md-6 button, button:has-text("Register")')[22m
+
+    at RegistrationPage.clickRegisterButton (C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\pages\RegistrationPage.ts:39:35)
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:60:40
+[INFO] [2026-09-16 01:28:55] Initializing registration pipeline execution engine...
+[INFO] [2026-09-16 01:28:55] [EXTENT] STARTING TEST: Client Registration Matrix Loop - Row 1 [Username: johnsmith01]
+[INFO] [2026-09-16 01:28:55] ▶️ Starting loop execution matrix row 1 of 50 for user profile: [johnsmith01]
+[ERROR] [2026-09-16 01:29:59] [EXTENT] FAIL: Client Registration Matrix Loop - Row 1 [Username: johnsmith01]
+[ERROR] [2026-09-16 01:29:59] Failure Diagnostics Stack Trace: TimeoutError: locator.waitFor: Timeout 60000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: /register/i }) to be visible[22m
+
+    at RegistrationPage.clickRegisterButton (C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\pages\RegistrationPage.ts:52:35)
+    at C:\Users\NG5347\Sizwe-QA-Playwright-POE\UIBank\tests\registration.spec.ts:60:40

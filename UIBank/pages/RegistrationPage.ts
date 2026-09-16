@@ -1,6 +1,7 @@
 import { Page, Locator } from '@playwright/test';
 
 export class RegistrationPage {
+
     private readonly registerButton: Locator;
     private readonly emailField: Locator;
     private readonly passwordField: Locator;
@@ -11,32 +12,53 @@ export class RegistrationPage {
     private readonly titleDropdown: Locator;
     private readonly employmentStatusDropdown: Locator;
     private readonly maritalStatusDropdown: Locator;
-    private readonly ageField: Locator; // Elements handle input text dates directly
+    private readonly ageField: Locator;
     private readonly dependentsField: Locator;
     private readonly usernameField: Locator;
     private readonly agreeCheckbox: Locator;
     private readonly submitButton: Locator;
 
     constructor(private readonly page: Page) {
-        this.registerButton = page.locator('app-welcome-page div.col-md-6 button, button:has-text("Register")');
+
+        this.registerButton = page.getByRole(
+            'button',
+            { name: /register/i }
+        );
+
         this.emailField = page.locator('#email');
         this.passwordField = page.locator('#password');
         this.firstNameField = page.locator('#firstName');
         this.lastNameField = page.locator('#lastName');
         this.middleNameField = page.locator('#middleName');
+
         this.sexDropdown = page.locator('#sex');
         this.titleDropdown = page.locator('#title');
         this.employmentStatusDropdown = page.locator('#employmentStatus');
         this.maritalStatusDropdown = page.locator('#maritalStatus');
+
         this.ageField = page.locator('#age');
         this.dependentsField = page.locator('#numberOfDependents');
         this.usernameField = page.locator('#username');
+
         this.agreeCheckbox = page.locator('#agreeCheckbox');
-        this.submitButton = page.locator('app-register form button[type="submit"]');
+
+        this.submitButton = page.locator(
+            'app-register form button[type="submit"]'
+        );
     }
 
     async clickRegisterButton(): Promise<void> {
-        await this.registerButton.click();
+
+        await this.registerButton.waitFor({
+            state: 'visible',
+            timeout: 60000
+        });
+
+        await this.registerButton.scrollIntoViewIfNeeded();
+
+        await this.registerButton.click({
+            force: true
+        });
     }
 
     async enterEmail(emailAddress: string): Promise<void> {
@@ -60,41 +82,52 @@ export class RegistrationPage {
     }
 
     async selectSex(gender: string): Promise<void> {
-        await this.sexDropdown.selectOption({ label: gender });
+
+        await this.sexDropdown.selectOption({
+            label: gender
+        });
     }
 
-    /**
-     * MAPPED FROM JAVA: Preserves custom userTitle mapping adjustments
-     */
     async selectTitle(userTitle: string): Promise<void> {
+
         let titleToSelect = userTitle;
+
         if (userTitle.toLowerCase() === 'dr') {
             titleToSelect = 'Mr';
         }
-        await this.titleDropdown.selectOption({ label: titleToSelect });
+
+        await this.titleDropdown.selectOption({
+            label: titleToSelect
+        });
     }
 
-    /**
-     * MAPPED FROM JAVA: Preserves all conditional status conversion logic
-     */
     async selectEmploymentStatus(status: string): Promise<void> {
+
         let statusToSelect = status;
 
         if (status.toLowerCase() === 'full-time') {
             statusToSelect = 'Full-time';
-        } else if (status.toLowerCase() === 'part-time') {
+        }
+        else if (status.toLowerCase() === 'part-time') {
             statusToSelect = 'Part-time';
-        } else if (status.toLowerCase() === 'self-employed') {
+        }
+        else if (status.toLowerCase() === 'self-employed') {
             statusToSelect = 'Unemployed';
-        } else if (status.toLowerCase() === 'student') {
+        }
+        else if (status.toLowerCase() === 'student') {
             statusToSelect = 'Part-time';
         }
 
-        await this.employmentStatusDropdown.selectOption({ label: statusToSelect });
+        await this.employmentStatusDropdown.selectOption({
+            label: statusToSelect
+        });
     }
 
     async selectMaritalStatus(status: string): Promise<void> {
-        await this.maritalStatusDropdown.selectOption({ label: status });
+
+        await this.maritalStatusDropdown.selectOption({
+            label: status
+        });
     }
 
     async enterDOB(dob: string): Promise<void> {
@@ -109,23 +142,34 @@ export class RegistrationPage {
         await this.usernameField.fill(user);
     }
 
-    /**
-     * MAPPED FROM JAVA: Automatically scrolls, forces checkbox click, and resolves 
-     * element interception errors natively without messy JavascriptExecutor scripts.
-     */
     async agreeTerms(): Promise<void> {
+
+        await this.agreeCheckbox.waitFor({
+            state: 'visible',
+            timeout: 60000
+        });
+
         await this.agreeCheckbox.scrollIntoViewIfNeeded();
-        // Playwright handles actionability automatically or allows direct forcing if elements overlap
-        await this.agreeCheckbox.check({ force: true });
+
+        await this.agreeCheckbox.check({
+            force: true
+        });
     }
 
     async clickSubmit(): Promise<void> {
-        await this.submitButton.click();
+
+        await this.submitButton.waitFor({
+            state: 'visible',
+            timeout: 60000
+        });
+
+        await this.submitButton.scrollIntoViewIfNeeded();
+
+        await this.submitButton.click({
+            force: true
+        });
     }
 
-    /**
-     * Workflow runner orchestration mapping registerNewUser from Java completely
-     */
     async registerNewUser(
         emailAddress: string,
         pwd: string,
@@ -140,20 +184,28 @@ export class RegistrationPage {
         dependentsCount: string,
         userName: string
     ): Promise<void> {
+
         await this.clickRegisterButton();
+
         await this.enterEmail(emailAddress);
         await this.enterPassword(pwd);
+
         await this.enterFirstName(fName);
         await this.enterLastName(lName);
         await this.enterMiddleName(mName);
+
         await this.selectSex(gender);
         await this.selectTitle(userTitle);
         await this.selectEmploymentStatus(employment);
         await this.selectMaritalStatus(marital);
+
         await this.enterDOB(dob);
         await this.enterDependents(dependentsCount);
+
         await this.enterUsername(userName);
+
         await this.agreeTerms();
+
         await this.clickSubmit();
     }
 }

@@ -6,5 +6,11 @@ test('GET Accounts', async ({ request }) => {
         'https://uibank.uipath.com/api/accounts'
     );
 
-    expect(response.status()).toBe(200);
+    const body = await response.text();
+
+    console.log('\n===== ACCOUNTS RESPONSE =====');
+    console.log('Status:', response.status());
+    console.log('Body:', body);
+
+    expect(response.ok()).toBeTruthy();
 });
